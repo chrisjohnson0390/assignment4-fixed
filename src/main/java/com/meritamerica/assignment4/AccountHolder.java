@@ -195,7 +195,7 @@ public class AccountHolder implements Comparable{
 	    }
 	    
 	    // Should also add a deposit transaction with the opening balance
-	    public CDAccount addCDAccount(CDOffering offering, double openingBalance) throws ExceedsFraudSuspicionLimitException, NegativeAmountException, ExceedsAvailableBalanceException {   	
+	    public CDAccount addCDAccount(CDOffering offering, double openingBalance) throws ExceedsFraudSuspicionLimitException{   	
 	    	CDAccount acc = new CDAccount(offering, openingBalance);
 	    	
 	    	return this.addCDAccount(acc);
@@ -203,7 +203,7 @@ public class AccountHolder implements Comparable{
 	    }
 	    
 	    //Should also add a deposit transaction with the opening balance
-	    public CDAccount addCDAccount(CDAccount cdAccount) throws ExceedsFraudSuspicionLimitException, NegativeAmountException, ExceedsAvailableBalanceException {
+	    public CDAccount addCDAccount(CDAccount cdAccount) throws ExceedsFraudSuspicionLimitException {
 	    	this.numberOfCDAs++;
 	    	
 	    	// check CDAccount array capacity

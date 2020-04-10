@@ -51,22 +51,22 @@ public class MeritAmericaBankApp {
 	    	
 			accountHolder.addCheckingAccount(500);
 			System.out.println("hi");
-//			DepositTransaction dt1 = new DepositTransaction(accountHolder.getSavingsAccounts()[0], 50, new Date());
-//			DepositTransaction dt2 = new DepositTransaction(accountHolder.getSavingsAccounts()[0], 500, new Date());
+			DepositTransaction dt1 = new DepositTransaction(accountHolder.getSavingsAccounts()[0], 50, new Date());
+			DepositTransaction dt2 = new DepositTransaction(accountHolder.getSavingsAccounts()[0], 500, new Date());
 			WithdrawTransaction wd1 = new WithdrawTransaction(accountHolder.getCheckingAccounts()[0], 150, new Date());
 			BankAccount checking = accountHolder.getCheckingAccounts()[0];
 			
-//			MeritBank.processTransaction(dt1);
-//			MeritBank.processTransaction(dt2);
+			MeritBank.processTransaction(dt1);
+			MeritBank.processTransaction(dt2);
 			MeritBank.processTransaction(wd1);
-//			
-//			SavingsAccount sa1 = accountHolder.getSavingsAccounts()[0];
-//			ArrayList<Transaction> trans = sa1.getTransactions();
-//			Transaction tran = trans.get(1);
-//			Transaction tran2 = trans.get(2);
-//			System.out.println(tran.toString());
-//			System.out.println(tran2);
-//			
+			
+			SavingsAccount sa1 = accountHolder.getSavingsAccounts()[0];
+			ArrayList<Transaction> trans = sa1.getTransactions();
+			Transaction tran = trans.get(1);
+			Transaction tran2 = trans.get(2);
+			System.out.println(tran.toString());
+			System.out.println(tran2);
+			
 			System.out.println(wd1.getTargetAccount().getBalance());
 			
 			

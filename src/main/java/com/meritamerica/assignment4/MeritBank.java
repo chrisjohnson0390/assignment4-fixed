@@ -458,6 +458,7 @@ public class MeritBank {
 		double amount = transaction.getAmount();
 		BankAccount source = transaction.getSourceAccount();
 		BankAccount target = transaction.getTargetAccount();
+		
 		// if amount > 1000, add to fraud queue
 		if (Math.abs(transaction.getAmount()) > 1000) {
 			MeritBank.fraudQueue.addTransaction(transaction);
@@ -506,12 +507,5 @@ public class MeritBank {
 		}
 		
 		return true;
-	}
-	
-//	public static void processDepositTransaction(Transaction transaction) throws ExceedsFraudSuspicionLimitException{
-//		if (Math.abs(transaction.getAmount()) > 1000) {
-//			throw new ExceedsFraudSuspicionLimitException();
-//		}
-//	}
-	
+	}	
 }
